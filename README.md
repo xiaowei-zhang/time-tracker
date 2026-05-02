@@ -19,6 +19,7 @@ Toggl’s built-in iCal export is read-only and limited to the past two weeks. T
 - **No paid plan required** — works on Toggl Free, Starter, and Premium
 
 ## Project Structure
+
 ```
 time-tracker/
 ├── CHANGELOG.md          Version history
@@ -30,7 +31,14 @@ time-tracker/
 └── .github/
     └── CONTRIBUTING.md   Contribution guidelines
 ```
-​​​​​​​​​​​
+​​​​
+## How it works
+
+1. The script calls the **Toggl API v9** (`/me/time_entries`) with a date range built from `DAYS_TO_SYNC`, using timezone-aware timestamps so the correct local date is always sent.
+2. Each completed time entry is mapped to a Google Calendar event with title, start/end time, duration, billable status, and tags.
+3. Before creating an event, the script checks for an existing calendar tag (`toggl_entry_id`) to prevent duplicates on repeated runs.
+4. If a project name is mapped in `PROJECT_COLORS`, the script fetches the project name from the Toggl API (cached in memory) and applies the matching Google Calendar color.
+5. The sync runs manually or automatically via a daily Apps Script time-based trigger​​​​​
 
 ## Prerequisites
 
