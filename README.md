@@ -21,23 +21,16 @@ Toggl’s built-in iCal export is read-only and limited to the past two weeks. T
 ## Project Structure
 ```
 time-tracker/
-├── CHANGELOG.md
-├── Code.gs
-├── LICENSE
-├── README.md
-├── appsscript.json
-├── .gitignore
+├── CHANGELOG.md          Version history
+├── Code.gs               Main sync script
+├── LICENSE               MIT license
+├── README.md             Setup guide and documentation
+├── appsscript.json       OAuth scopes and runtime manifest
+├── .gitignore            Excludes credentials and local overrides
 └── .github/
-    └── CONTRIBUTING.md
+    └── CONTRIBUTING.md   Contribution guidelines
 ```
-
-- [CHANGELOG.md](CHANGELOG.md) — Follows Keep a Changelog format, dated today with the full feature list for v1.0.0.
-- [Code.gs](Code.gs) - Syncs Toggl Track time entries to Google Calendar as writable events via Toggl API v9 and Google Apps Script.
-- [LICENSE](LICENSE) — MIT license with the current year pre-filled. Replace Your Name before publishing.
-- [README.md](README.md) — Full setup guide covering both credential methods, a configuration reference table, color ID table, utility function list, and known limitations section.
-- [appsscript.json](appsscript.json) — OAuth scopes manifest declaring the three permissions the script needs: calendar, external_request (for the Toggl API calls), and scriptapp (for the trigger setup).
-- [.gitignore](.gitignore) — Excludes .env, local config overrides, .DS_Store, and importantly .clasprc.json (the Google Apps Script CLI auth file which contains tokens).
-- [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) - Guidelines for reporting bugs, suggesting features, and submitting pull requests.​​​​​​​​​​​​​​​​
+​​​​​​​​​​​
 
 ## Prerequisites
 
