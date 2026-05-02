@@ -1,3 +1,14 @@
+/**
+ * @name         time-tracker
+ * @version      1.0.0
+ * @description  Syncs Toggl Track time entries to Google Calendar via Toggl API v9.
+ *               Supports full history export, project color-coding, deduplication,
+ *               billable/tag metadata, and automatic daily triggering.
+ * @author       Xiaowei Zhang
+ * @license      MIT
+ * @repository   https://github.com/xiaowei-zhang/time-tracker
+ */
+
 // ============================================================
 //  TOGGL TRACK → GOOGLE CALENDAR SYNC
 //  Google Apps Script | Toggl API v9 | Full Read+Write
